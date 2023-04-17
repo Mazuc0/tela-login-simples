@@ -19,7 +19,7 @@
                   <input type="password" name="password" id="password" placeholder="Senha" class="infos">
                   <h2>Esqueceu a senha?</a></h2>
                   <br>
-                  <input type="submit" name="login" id="login" value="Login" class="button-login">
+                  <input type="submit" name="login" id="login" value="Login" class="button-login" onclick="troca()">
 
                 </div>
             
@@ -27,5 +27,13 @@
         </section>
     </main>
     
+    <script>
+        const body = document.querySelector("body");
+        
+        function troca(){
+        body.classList.toggle("blue-theme") || body.classList.toggle("red-theme");
+        }
+
+    </script>
 </body>
 </html>
