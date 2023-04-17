@@ -8,11 +8,29 @@
     text-decoration: none;
 }
 
+:root {
+    --background-color: #a64cf0;
+    --background-color2: #6c24a7;
+    /*
+    var(--background-color)
+    var(--background-color2)
+    */
+}
+
+.blue-theme {
+    --background-color: #4caef0;
+    --background-color2: #2687c7;
+}
+
+.red-theme {
+    --background-color: #f52d2d;
+    --background-color2: #a00e09;
+}
+
 body {
     font-size: 100%;
     background-color: #1e1e1f;
     background-attachment: fixed;
-
 }
 
 .section1 {
@@ -28,7 +46,7 @@ body {
     position: relative;
     width: 380px;
     height: 420px;
-    background-color: rgb(38, 38, 38);
+    background-color: #262626;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -40,7 +58,7 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg, transparent,rgb(166, 76, 240), rgb(166, 76, 240));
+    background: linear-gradient(0deg, transparent,var(--background-color), var(--background-color));
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
 }
@@ -52,7 +70,7 @@ body {
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg, transparent, rgb(166, 76, 240), rgb(166, 76, 240));
+    background: linear-gradient(0deg, transparent, var(--background-color), var(--background-color));
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
     animation-delay: -3s ;
@@ -70,7 +88,7 @@ body {
 .form {
     position: absolute;
     z-index: 10;
-    background: rgb(38, 38, 38);
+    background: #262626;
     inset: 2px;
     border-radius: 8px;
     display: flex;
@@ -88,37 +106,42 @@ body {
 }
 
 .infos {
-    background-color: rgb(38, 38, 38);
-    border-bottom: 1px solid rgb(166, 76, 240);
+    background-color: #262626;
+    border-bottom: 1px solid var(--background-color);
     width: 300px;
     height: 35px;
     color: aliceblue;
     text-align: center;
 }
 
+.infos:focus {
+    background-color: #262626;
+}
+
 h2 {
     font-size: 15px;
     font-weight: 400;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(196, 199, 202);
+    color: #c4c7ca;
     cursor: pointer;
 }
 
 h2:hover {
-    color: rgba(196, 199, 202, 0.774);
+    color: #c4c7cac5;
 }
 
 .button-login {
     width: 300px;
     height: 45px;
     border-radius: 20px;
-    background-color: rgb(108, 36, 167);
+    background-color: var(--background-color2);
     font-size: 15px;
     color: aliceblue;
+    transition: all .5s ease-in-out;
 }
 
 .button-login:hover {
     border-radius: 20px;
-    background-color: rgb(86, 21, 139);
+    opacity: 70%;
     font-size: 15px;
 }
